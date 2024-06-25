@@ -28,7 +28,7 @@ export function OrderList({ orders }: OrderListProps) {
                 </div>
               ))}
             </td>
-            <td data-label="Valor Total (R$)">{order.valorTotal.toFixed(2)}</td>
+            <td data-label="Valor Total (R$)">{`R$${order.valorTotal.toFixed(2)}`}</td>
             <td data-label="Email" className={styles.oneLineEllipsis}>{order.cliente.email}</td>
             <td data-label="Status">{order.status}</td>
           </tr>

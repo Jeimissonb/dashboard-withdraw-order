@@ -8,7 +8,7 @@ export function TotalOrdersCount({ count }: TotalOrdersCountProps) {
   return (
     <div className={styles.card}>
       <h3>Total de Pedidos (Unidades)</h3>
-      <p>{count}🛒</p>
+      <p>{count} 🛒</p>
     </div>
   );
 }
