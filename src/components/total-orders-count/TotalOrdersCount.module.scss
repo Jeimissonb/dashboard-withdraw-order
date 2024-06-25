@@ -1,0 +1,42 @@
+.card {
+  background-color: #ffffff;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 0.8rem groove #805ad5;
+  border-bottom: 0.8rem inset #805ad5;
+  text-align: center;
+  box-shadow: 0 0 7px #805ad5;  
+  flex: 1;
+
+  h3 {
+    margin-bottom: 0.625rem;
+    font-size: 1.125rem;
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.938rem;
+    h3 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.625rem;
+    h3 {
+      font-size: 0.875rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+    }
+  }
+}

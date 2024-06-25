@@ -1,0 +1,77 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+
+  th, td {
+    padding: 0.938rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  th {
+    background-color: #805ad5;
+    color: #ffffff;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #e2e8f0;
+  }
+  tbody tr:nth-child(odd) {
+    background-color: #805ad550; // é a cor da paleta, porém adicionei opacidade de 50% (2 últimos digidos)
+  }
+
+  @media (max-width: 768px) {
+    th, td {
+      padding: 0.625rem;
+      font-size: 0.875rem;
+    }
+
+    th {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    display: block;
+    thead {
+      display: none;
+    }
+
+    tbody {
+      display: contents;
+    }
+
+    tbody tr {
+      display: block;
+      margin-bottom: 0.938rem;
+      border-bottom: 2px solid #e2e8f0;
+      border-radius: 10px;
+    }
+
+    tbody tr td {
+      display: block;
+      text-align: right;
+      font-size: 0.813rem;
+      border-bottom: none;
+      padding: 0.625rem;
+      position: relative;
+      padding-left: 50%;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    tbody tr td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0.625rem;
+      width: calc(50% - 1.25rem);
+      padding-right: 0.625rem;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: bold;
+    }
+  }
+}
