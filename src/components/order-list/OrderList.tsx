@@ -1,24 +1,5 @@
+import { Order } from '../../models/Order';
 import styles from './OrderList.module.scss';
-
-interface Produto {
-  nome: string;
-  valor: number;
-}
-
-interface Cliente {
-  nome: string;
-  email: string;
-  cpf: string;
-}
-
-interface Order {
-  id: number;
-  data: string;
-  valorTotal: number;
-  produtos: Produto[];
-  cliente: Cliente;
-  status: string;
-}
 
 interface OrderListProps {
   orders: Order[];
